@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmetics Brand Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Cosmetics Brand Analysis</h1>
+    <h5>Compare brands by skin type, ingredients, and price-to-rating relationships.</h5>
+    
+    <div class="filter-container">
+        <label for="labelFilter">Filter by Label:</label>
+        <select id="labelFilter">
+            <option value="All">All Products</option>
+        </select>
+    </div>
+
+    <div class="top-visuals-container">
+        <div class="visualization-card">
+            <h2>Top 10 Brands: Product Distribution by Skin Types</h2>
+            <div id="bar-chart"></div>
+        </div>
+
+        <div class="visualization-card">
+            <h2>Top 25 Most Common Ingredients</h2>
+            <div id="ingredients-treemap"></div>
+        </div>
+    </div>
+    
+    <div class="sankey-container">
+        <h2>Brand-Price-Rank Relationships</h2>
+        <div id="sankey-chart" style="height: 3600px;"></div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
